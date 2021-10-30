@@ -1,0 +1,9 @@
+.navlink {
+  text-decoration: none;
+}
+a:hover {
+  background-color: #57ead6;
+}
+.primary {
+  background-color: #bcf1ea;
+}

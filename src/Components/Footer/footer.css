@@ -1,0 +1,12 @@
+h6:hover {
+  transform: scale(1.5);
+  transition-duration: 1s;
+}
+i:hover {
+  transform: scale(1.5);
+  transition-duration: 1s;
+}
+.primary {
+  background-color: #bcf1ea;
+  border: 1px solid black;
+}
