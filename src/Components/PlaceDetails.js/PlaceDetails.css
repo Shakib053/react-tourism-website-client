@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+
+.title {
+  font-family: "Lobster", cursive;
+}
+.details {
+  font-family: "Alfa Slab One", cursive;
+}

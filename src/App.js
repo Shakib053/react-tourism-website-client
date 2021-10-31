@@ -21,6 +21,7 @@ import ManageOrders from './Components/ManageOrders/ManageOrders';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import PlaceDetails from './Components/PlaceDetails.js/PlaceDetails';
 import AddService from './Components/AddService/AddService';
+import OrderTake from './Components/OrderTake/OrderTake';
 function App() {
   return (
     <AuthProvider>
@@ -48,6 +49,9 @@ function App() {
           <PrivateRoute path="/placeDetails/:id">
             <PlaceDetails></PlaceDetails>
           </PrivateRoute>
+          <Route to='/takeOrders'>
+            <OrderTake></OrderTake>
+          </Route>
           <Route path='/myorders'>
             <MyOrders></MyOrders>
           </Route>

@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     const [places, setPlaces] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/destinations')
+        fetch('https://safe-temple-87819.herokuapp.com/destinations')
             .then(res => res.json())
             .then(data => setPlaces(data));
     }, [])
@@ -17,8 +17,6 @@ const Home = () => {
         <div className="container">
             <div className="container-fluid ">
                 <h1 className="text-center pt-5">Welcome to <span className="text-uppercase text-warning">travel booking agency</span></h1>
-                {/* <h6 className="text-center text-capitalize pb-5">our medical
-                    specialists care about you & your family's health </h6> */}
                 <h3 className="text-center text-capitalize banner-title">Enjoy your stay</h3>
                 <p className="text-center text-capitalize pb-5 banner-des">discover amazing places at exclusive deals.we will be glad to have you as our valuable customer</p>
                 <img src={image} style={{ width: "100%", paddingBottom: "50px" }} alt="" srcset="" />
