@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Place = (props) => {
-    const { id, name, img, rating, price, persons, days } = props.place;
+    const { _id, name, img, rating, price, persons, days } = props.place;
     console.log(props);
     return (
         <div className="col p-3">
@@ -27,7 +27,7 @@ const Place = (props) => {
                     </div>
 
                 </div>
-                <Link className="mx-auto" to={`/placeDetails/${id}`}>
+                <Link className="mx-auto" to={`/placeDetails/${_id}`}>
                     <button className="w-100 btn btn-warning text-center"> Book Now</button>
                 </Link>
             </div>

@@ -12,9 +12,8 @@ const OrderTake = () => {
         const persons = personsRef.current.value;
         const days = daysRef.current.value;
         const newUser = { name, persons, days, email };
-        console.log(JSON.stringify(newUser));
 
-        fetch('https://safe-temple-87819.herokuapp.com/takeOrders', {
+        fetch('https://safe-temple-87819.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -24,7 +23,7 @@ const OrderTake = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    alert('Successfully added the user.')
+                    alert('Order Processed Successfully')
                     e.target.reset();
                 }
             })

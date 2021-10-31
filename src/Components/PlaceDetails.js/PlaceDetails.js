@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import './PlaceDetails.css'
 
 const PlaceDetails = () => {
-
     const { id } = useParams();
     console.log(id);
     const [data, setData] = useState([]);
@@ -13,7 +12,7 @@ const PlaceDetails = () => {
             .then(res => res.json())
             .then(data => setData(data));
     }, [])
-    const ExactData = data.filter(td => td.id == id)
+    const ExactData = data.filter(td => td._id == id)
     return (
         <div className="row row-cols-1 row-cols-md-2 g-4 m-4">
 
