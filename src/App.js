@@ -4,8 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
@@ -49,18 +48,18 @@ function App() {
           <PrivateRoute path="/placeDetails/:id">
             <PlaceDetails></PlaceDetails>
           </PrivateRoute>
-          <Route to='/takeOrders'>
+          <PrivateRoute path='/takeOrders'>
             <OrderTake></OrderTake>
-          </Route>
-          <Route path='/myorders'>
+          </PrivateRoute>
+          <PrivateRoute path='/myorders'>
             <MyOrders></MyOrders>
-          </Route>
-          <Route path='/manageorders'>
+          </PrivateRoute>
+          <PrivateRoute path='/manageorders'>
             <ManageOrders></ManageOrders>
-          </Route>
-          <Route path='/addService'>
+          </PrivateRoute>
+          <PrivateRoute path='/addService'>
             <AddService></AddService>
-          </Route>
+          </PrivateRoute>
           <Route exact path='*'>
             <NotFound></NotFound>
           </Route>

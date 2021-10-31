@@ -36,21 +36,11 @@ const Navbar = () => {
                                 <a className="nav-link text-black" aria-current="page" href="#">Home</a>
                             </li>
                         </Link>
-                        {/* <Link className="navlink" to='/aboutus'>
-                            <li className="nav-item mx-3">
-                                <a className="nav-link text-black" style={{ fontSize: "1.3rem" }} href="#">About Us</a>
-                            </li>
-                        </Link> */}
                         <Link className="navlink" to='/destinations'>
                             <li className="nav-item mx-3">
                                 <a className="nav-link text-black" href="#">Destinations</a>
                             </li>
                         </Link>
-                        {/* <Link className="navlink" to='/contactus'>
-                            <li className="nav-item mx-3">
-                                <a className="nav-link text-black" style={{ fontSize: "1.3rem" }} href="#">Contact Us</a>
-                            </li>
-                        </Link> */}
                         {
                             user?.email && <Link className="navlink" to='/myorders'>
                                 <li className="nav-item mx-3">
