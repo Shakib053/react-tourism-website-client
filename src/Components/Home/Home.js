@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import image from './travel-banner.jpg'
 import image1 from './b-1.PNG'
 import signature from './signature.png'
 import './Home.css'
+import Place from '../Place/Place';
+import { Link } from 'react-router-dom';
 const Home = () => {
-    // const [service, setService] = useState([]);
-    // useEffect(() => {
-    //     fetch('./servicedata.json')
-    //         .then(res => res.json())
-    //         .then(data => setService(data));
-    // }, [])
+    const [places, setPlaces] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/destinations')
+            .then(res => res.json())
+            .then(data => setPlaces(data));
+    }, [])
+    const newPlaces = places.slice(0, 4);
     return (
         <div className="container">
             <div className="container-fluid ">
@@ -46,11 +49,16 @@ const Home = () => {
                 <h1 className="text-capitalize mb-5">recommended</h1>
             </div>
 
-            {/* <div className="row row-cols-1 row-cols-md-2 g-4">
+            <div className="row row-cols-1 row-cols-md-2 g-4">
                 {
-                    service.map(sd => <SingleService key={sd.id} sd={sd}></SingleService>)
+                    newPlaces.map(place => <Place key={place.id} place={place}></Place>)
                 }
-            </div> */}
+            </div>
+            <div className="mx-auto text-center m-5 ">
+                <Link to='/destinations'>
+                    <button className="all-destinations p-2">See Our All Offerings</button>
+                </Link>
+            </div>
         </div>
     );
 };
