@@ -4,7 +4,7 @@ import useAuth from '../../hooks/useAuth';
 
 const OrderTake = () => {
     const { user } = useAuth();
-
+    const status = "Pending";
     const personsRef = useRef();
     const daysRef = useRef();
     const desRef = useRef();
@@ -17,7 +17,7 @@ const OrderTake = () => {
         const persons = personsRef.current.value;
         const days = daysRef.current.value;
         const address = addressRef.current.value;
-        const newUser = { name, persons, days, email, des, address };
+        const newUser = { name, persons, days, email, des, address, status };
 
         fetch('https://safe-temple-87819.herokuapp.com/orders', {
             method: 'POST',
