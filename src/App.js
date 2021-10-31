@@ -60,7 +60,7 @@ function App() {
           <PrivateRoute path='/addService'>
             <AddService></AddService>
           </PrivateRoute>
-          <Route exact path='*'>
+          <Route path='*'>
             <NotFound></NotFound>
           </Route>
         </Switch>
