@@ -43,26 +43,41 @@ const AddService = () => {
         e.preventDefault();
     }
     return (
-        <div>
-            <h2>Please Add a Destination</h2>
-            <form onSubmit={handleAddService} className="text-center">
-                <input placeholder="name of the place" ref={nameRef} type="text" />
+        <div >
+            <h2 className="text-center mt-5">Please Add a Destination</h2>
+            <form onSubmit={handleAddService} className="m-5">
+                <label htmlFor="">Name of the place you want to add : <input placeholder="name of the place" ref={nameRef} type="text" /></label>
+
                 <br />
-                <input type="text" placeholder="details of the place" ref={detailsRef} />
                 <br />
-                <input type="text" placeholder="country name" ref={countryRef} />
+                <label htmlFor="">Add Some details of the place :  <input type="text" placeholder="details of the place" ref={detailsRef} /></label>
+
                 <br />
-                <input type="text" placeholder="minimum required persons" ref={personsRef} />
                 <br />
-                <input type="text" placeholder="currency" ref={currencyRef} />
+
+                <label htmlFor="">Country : <input type="text" placeholder="country name" ref={countryRef} /></label>
                 <br />
-                <input type="text" placeholder="country's language" ref={languageRef} />
                 <br />
-                <input type="text" placeholder="minimum days required" ref={daysRef} />
+                <label htmlFor="">Minimum Persons : <input type="text" placeholder="minimum required persons" ref={personsRef} />  </label>
+
                 <br />
-                <input type="text" placeholder="price" ref={priceRef} />
                 <br />
-                <input type="text" placeholder="image's url" ref={imgRef} />
+                <label htmlFor="">
+                    currency : <input type="text" placeholder="currency" ref={currencyRef} />
+                </label>
+                <br />
+                <br />
+                <label htmlFor="">Country Language :    <input type="text" placeholder="country's language" ref={languageRef} /></label>
+                <br />
+                <br />
+                <label htmlFor="">Minimum Days :     <input type="text" placeholder="minimum days required" ref={daysRef} /></label>
+                <br />
+                <br />
+                <label htmlFor="">Price : <input type="text" placeholder="price" ref={priceRef} /></label>
+                <br />
+                <br />
+                <label htmlFor="">Image URL :       <input type="text" placeholder="image's url" ref={imgRef} /></label>
+                <br />
                 <br />
                 <input type="submit" value="Add" />
             </form>
