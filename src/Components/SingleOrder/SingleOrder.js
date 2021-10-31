@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const SingleOrder = (props) => {
-    const { name, persons, days, email, _id } = props.order;
+    const { name, persons, days, email, _id, address } = props.order;
     console.log(props.order);
     const [orders, setOrders] = useState([]);
     useEffect(() => {
@@ -33,7 +33,8 @@ const SingleOrder = (props) => {
                 <h3>Booking Email id : <span className="text-primary">{email}</span></h3>
                 <h3>For : {persons} Persons</h3>
                 <h4>For : {days} Days</h4>
-                <button className="mx-3 btn-warning p-2" onClick={() => handleDelete(_id)}>Delete</button>
+                <h5>Customer Address : <span ><small>{address}</small></span></h5>
+                <button className="mx-3 my-3 btn-warning p-2" onClick={() => handleDelete(_id)}>Delete</button>
                 <button className="btn-warning p-2" >Approve</button>
             </div>
 

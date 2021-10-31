@@ -8,6 +8,7 @@ const OrderTake = () => {
     const personsRef = useRef();
     const daysRef = useRef();
     const desRef = useRef();
+    const addressRef = useRef();
 
     const handleOrder = e => {
         const name = user.displayName;
@@ -15,7 +16,8 @@ const OrderTake = () => {
         const email = user.email;
         const persons = personsRef.current.value;
         const days = daysRef.current.value;
-        const newUser = { name, persons, days, email, des };
+        const address = addressRef.current.value;
+        const newUser = { name, persons, days, email, des, address };
 
         fetch('https://safe-temple-87819.herokuapp.com/orders', {
             method: 'POST',
@@ -35,24 +37,27 @@ const OrderTake = () => {
     }
     return (
         <div>
-            <h2>Please Fill Up Details to confirm order</h2>
+            <h2 className="text-center my-5 text-primary">Please Fill Up Details to confirm order</h2>
             <form onSubmit={handleOrder} className="text-center">
-                <h5>User Name :</h5>
+                <h5>User Name </h5>
                 <input placeholder="Booking Name" defaultValue={user.displayName} type="text" />
                 <br />
-                <h5>User's Emailaddress :</h5>
+                <h5>User's Emailaddress </h5>
                 <input type="text" placeholder="Please add an email" defaultValue={user.email} />
                 <br />
-                <h5>Type the place's name you want to visit : </h5>
+                <h5>Type the place's name you want to visit  </h5>
                 <input type="text" placeholder="Please add your destination" ref={desRef} />
                 <br />
-                <h5>Persons you want to take with you : </h5>
+                <h5>How many persons you want to take with you?  </h5>
                 <input type="text" placeholder="for how many persons" ref={personsRef} />
                 <br />
                 <h5>Durations : </h5>
                 <input type="text" placeholder="for how many days" ref={daysRef} />
                 <br />
-                <input type="submit" value="Add" />
+                <h5>Address : </h5>
+                <input type="text" placeholder="your present address" ref={addressRef} />
+                <br />
+                <input type="submit" className="my-5 px-3 btn btn-info" value="Add" />
             </form>
         </div>
     );
