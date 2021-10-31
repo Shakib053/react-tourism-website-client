@@ -63,7 +63,7 @@ const AddService = () => {
                 <br />
                 <br />
                 <label htmlFor="">
-                    currency : <input type="text" placeholder="currency" ref={currencyRef} />
+                    Currency : <input type="text" placeholder="currency" ref={currencyRef} />
                 </label>
                 <br />
                 <br />
@@ -79,7 +79,7 @@ const AddService = () => {
                 <label htmlFor="">Image URL :       <input type="text" placeholder="image's url" ref={imgRef} /></label>
                 <br />
                 <br />
-                <input type="submit" value="Add" />
+                <input type="submit" value="Submit" className="btn-primary p-2" />
             </form>
         </div>
     );

@@ -33,8 +33,8 @@ const SingleOrder = (props) => {
                 <h3>Booking Email id : <span className="text-primary">{email}</span></h3>
                 <h3>For : {persons} Persons</h3>
                 <h4>For : {days} Days</h4>
-                <button onClick={() => handleDelete(_id)}>Delete</button>
-                <button>Approve</button>
+                <button className="mx-3 btn-warning p-2" onClick={() => handleDelete(_id)}>Delete</button>
+                <button className="btn-warning p-2" >Approve</button>
             </div>
 
         </div>
