@@ -10,7 +10,6 @@ const AddService = () => {
     const priceRef = useRef();
     const imgRef = useRef();
     const daysRef = useRef();
-
     const handleAddService = e => {
         const name = nameRef.current.value;
         const description = detailsRef.current.value;
@@ -25,7 +24,6 @@ const AddService = () => {
         const reviews = 1;
         const newUser = { name, description, country, currency, persons, language, price, img, days, rating, reviews };
         console.log(JSON.stringify(newUser));
-
         fetch('https://safe-temple-87819.herokuapp.com/destinations', {
             method: 'POST',
             headers: {
@@ -50,7 +48,7 @@ const AddService = () => {
 
                 <br />
                 <br />
-                <label htmlFor="">Add Some details of the place :  <input type="text" placeholder="details of the place" ref={detailsRef} /></label>
+                <label htmlFor="">Add Some details of the place : <input type="text" placeholder="details of the place" ref={detailsRef} /></label>
 
                 <br />
                 <br />
@@ -58,7 +56,7 @@ const AddService = () => {
                 <label htmlFor="">Country : <input type="text" placeholder="country name" ref={countryRef} /></label>
                 <br />
                 <br />
-                <label htmlFor="">Minimum Persons : <input type="text" placeholder="minimum required persons" ref={personsRef} />  </label>
+                <label htmlFor="">Minimum Persons :<input type="text" placeholder="minimum required persons" ref={personsRef} />  </label>
 
                 <br />
                 <br />
@@ -67,19 +65,20 @@ const AddService = () => {
                 </label>
                 <br />
                 <br />
-                <label htmlFor="">Country Language :    <input type="text" placeholder="country's language" ref={languageRef} /></label>
+                <label htmlFor="">Country Language : <input type="text" placeholder="country's language" ref={languageRef} /></label>
                 <br />
                 <br />
-                <label htmlFor="">Minimum Days :     <input type="text" placeholder="minimum days required" ref={daysRef} /></label>
+                <label htmlFor="">Minimum Days : <input type="text" placeholder="minimum days required" ref={daysRef} /></label>
                 <br />
                 <br />
                 <label htmlFor="">Price : <input type="text" placeholder="price" ref={priceRef} /></label>
                 <br />
                 <br />
-                <label htmlFor="">Image URL :       <input type="text" placeholder="image's url" ref={imgRef} /></label>
+                <label htmlFor="">Image URL : <input type="text" placeholder="image's url" ref={imgRef} /></label>
                 <br />
                 <br />
                 <input type="submit" value="Submit" className="btn-primary p-2" />
+                <input type="file" accept="image/*" value="Submit" className="btn-primary p-2" />
             </form>
         </div>
     );
